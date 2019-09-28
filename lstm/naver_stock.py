@@ -29,17 +29,23 @@ class Machine:
     def test(self, code):
         # item_name '삼성전자'
         # url = self.get_url(item_name, self.code_df)
-        url = 'http://finance.naver.com/item/sise_day.nhn?code={code}'.format(code=code)
+        url = 'http://finance.naver.com/item/sise_day.nhn?'
         df = pd.DataFrame()
         for page in range(1, 21):
-            pg_url = '{url}&page={page}'.format(url=url, page=page)
+            pg_url = '{url}code={code}&page={page}'.format(url=url, code=code, page=page)
             df = df.append(pd.read_html(pg_url, header=0)[0], ignore_index=True)
-            df.dropna(inplace=True) # na 결측값(측정할 수 없는 값, null 값 등등) 제거
+        df.dropna(inplace=True) # na 결측값(측정할 수 없는 값, null 값 등등) 제거
             
-            return df
+        return df
 
-    def rename_item_name(self):
-        df = self.test().rename(columns = {})
+    def rename_item_name(self, param):
+        df = param.rename(columns={'날짜': 'date', '종가': 'close', '전일비': 'diff',
+                                   '시가': 'open', '고가': 'high', '저가': 'low', '거래량': 'volumn'})
+        df[['close', 'diff', 'open', 'high', 'low', 'volumn']] = \
+            df[['close', 'diff', 'open', 'high', 'low', 'volumn']].astype(int)
+        df['date'] = pd.to_datetime(df['date'])
+        df = df.sort_values(by=['date'], ascending=True)
+        return df
 
 if __name__ == '__main__':
     print('>>>')
@@ -49,6 +55,7 @@ if __name__ == '__main__':
         print('0. EXIT')
         print('1. 종목헤드')
         print('2. 종목컬럼명 보기')
+        print('3. 전처리결과 보기')
 
         return input('CHOOSE ONE : ')
 
@@ -62,4 +69,5 @@ if __name__ == '__main__':
             m.code_df_head()
         elif menu == '2':
             print(m.test('005930'))
-
+        elif menu == '3':
+            print(m.rename_item_name(m.test('005930')))

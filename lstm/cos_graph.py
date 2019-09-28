@@ -6,7 +6,7 @@ class Graph:
         pass
 
     def show(self):
-        signal_data = np.cos(np.arange(1600) * (20 * np.pi / 1000)[:, None])
+        signal_data = np.cos(np.arange(1600) * (20 * np.pi / 1000))[:, None]
         plot_x = np.arange(1600)
         plot_y = signal_data
         plt.plot(plot_x, plot_y)
