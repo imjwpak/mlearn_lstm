@@ -4,6 +4,7 @@
     <list default="true" id="5d9c4adf-915d-4528-8580-c00ffe9e1e7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lstm/ai_trader.py" beforeDir="false" afterPath="$PROJECT_DIR$/lstm/ai_trader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lstm/movie_lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/lstm/movie_lstm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +30,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ezen\PycharmProjects\tensorflow190928\lstm\data" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -41,7 +47,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.movie_lstm">
+  <component name="RunManager" selected="Python.ai_trader">
+    <configuration name="ai_trader" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tensorflow190928" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lstm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lstm/ai_trader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="cos_graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tensorflow190928" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -128,6 +155,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ai_trader" />
         <item itemvalue="Python.movie_lstm" />
         <item itemvalue="Python.keras_sample" />
         <item itemvalue="Python.cos_graph" />
@@ -153,7 +181,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

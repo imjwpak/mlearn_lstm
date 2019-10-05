@@ -38,7 +38,7 @@ class Machine:
             epochs=epochs,
             validation_data=(data.x_test,
                              data.y_test),
-            verbose=2)
+            verbose=2)0
         loss, acc = model.evaluate(
             data.x_test,
             data.y_test,
